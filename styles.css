@@ -1,0 +1,37 @@
+body {
+    background-color: #202020;
+}
+
+p {
+    color: #ff0000;
+}
+
+h2 {
+    color: #ff0000;
+}
+
+input {
+    background-color: #ffffff;
+    width: 80%;
+    height: 10em;
+    
+}
+
+textarea {
+    background-color: #ffffff;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.stage3grid {
+    display: grid;
+    grid-template-columns: 15em auto;
+    grid-template-rows: 3em auto 2em;
+}
+
+textarea[name="outputMembers"] {
+    text-align: end;
+}

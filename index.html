@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Närvaro</title>
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header></header>
+    <p>sognogne</p>
+    <form>
+        <div class="stage1">
+            <h2>Klistra in närvaro data från google sheets</h2>
+            <textarea name="attendance" rows="20" cols="80"></textarea>
+            <select name="members">
+                <option value="0">Första raden är alla deltagare</option>
+                <option value="1">Sista raden är alla deltagare</option>
+                <option value="2">Ta automatiskt reda på alla deltagare</option>
+            </select>
+    
+            <button type="submit" name="submitMembers">Skicka</button>
+        </div>
+
+        <div class="stage2 hidden">
+            <select name="leader1" id="Leader1">
+                <option value="0">Ingen</option>
+            </select>
+            <select name="leader2" id="Leader2">
+                <option value="0">Ingen</option>
+            </select>
+    
+            <button type="submit" name="submitLeaders">Skicka</button>
+        </div>
+
+        <div class="stage3 hidden">
+            <div class="stage3grid">
+                <h2>Sammanställning</h2>
+                <textarea name="outputMeetings" rows="4" cols="20"></textarea>
+                <textarea name="outputMembers" rows="20" cols="20"></textarea>
+                <textarea name="outputBinary" rows="20" cols="40"></textarea>
+                <textarea name="outputLeaders" rows="20" cols="20"></textarea>
+                <textarea name="outputLeadersBinary" rows="20" cols="40"></textarea>
+            </div>
+        </div>
+
+
+    </form>
+    <p>
+        oisejg
+    </p>
+</body>
+</html>
