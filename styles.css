@@ -1,12 +1,52 @@
-body {
-    background-color: #202020;
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
 }
 
-p {
-    color: #ff0000;
+body {
+    background-image: url("background.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    background-color:rgba(100, 100, 100, 0);
+    height: 138px;
+    padding: 5px;
+}
+
+header div {
+    margin-left: 1em;
+}
+
+i {
+    font-family: cursive;
+    font-size: 12px;
+}
+
+h1 {
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 24px;
+    color: #000000;
+    text-shadow: #aaaaaa 1px 1px;
 }
 
 h2 {
+    font-family: 'Tangerine', cursive;
+    font-size: 90px;
+    font-weight:300;
+    color: #ffffff;
+    text-shadow: #000000 2px 2px;
+}
+
+
+
+p {
     color: #ff0000;
 }
 

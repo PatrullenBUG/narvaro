@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Närvaro</title>
+    <title>Närvarosammanställaren 2000</title>
     <script defer src="app.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.ico">
 </head>
 <body>
-    <header></header>
+    <header>
+        <img alt="scoutloggan" src="logo.webp" height="128" width="128">
+        <div>
+            
+            <h1><i>(en person i)</i> Utmanarpatrullen BUG presenterar</h1>            
+            <h2>Närvarosammanställaren 2000</h2>
+        </div>
+    </header>
     <p>sognogne</p>
     <form>
         <div class="stage1">
-            <h2>Klistra in närvaro data från google sheets</h2>
+            <h3>Klistra in närvaro data från google sheets</h3>
             <textarea name="attendance" rows="20" cols="80"></textarea>
             <select name="members">
+                <option value="2">Ta automatiskt reda på alla deltagare</option>
                 <option value="0">Första raden är alla deltagare</option>
                 <option value="1">Sista raden är alla deltagare</option>
-                <option value="2">Ta automatiskt reda på alla deltagare</option>
             </select>
     
             <button type="submit" name="submitMembers">Skicka</button>
