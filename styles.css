@@ -75,3 +75,6 @@ textarea {
 textarea[name="outputMembers"] {
     text-align: end;
 }
+/* 
+background: rgb(255,0,0);
+background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,188,42,1) 13%, rgba(251,252,2,1) 27%, rgba(232,255,0,1) 35%, rgba(9,255,0,1) 50%, rgba(2,255,204,1) 60%, rgba(0,255,248,1) 69%, rgba(0,14,255,1) 82%, rgba(255,0,224,1) 100%); */

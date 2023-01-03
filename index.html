@@ -18,46 +18,48 @@
             <h2>Närvarosammanställaren 2000</h2>
         </div>
     </header>
-    <p>sognogne</p>
-    <form>
-        <div class="stage1">
-            <h3>Klistra in närvaro data från google sheets</h3>
-            <textarea name="attendance" rows="20" cols="80"></textarea>
-            <select name="members">
-                <option value="2">Ta automatiskt reda på alla deltagare</option>
-                <option value="0">Första raden är alla deltagare</option>
-                <option value="1">Sista raden är alla deltagare</option>
-            </select>
-    
-            <button type="submit" name="submitMembers">Skicka</button>
-        </div>
-
-        <div class="stage2 hidden">
-            <select name="leader1" id="Leader1">
-                <option value="0">Ingen</option>
-            </select>
-            <select name="leader2" id="Leader2">
-                <option value="0">Ingen</option>
-            </select>
-    
-            <button type="submit" name="submitLeaders">Skicka</button>
-        </div>
-
-        <div class="stage3 hidden">
-            <div class="stage3grid">
-                <h2>Sammanställning</h2>
-                <textarea name="outputMeetings" rows="4" cols="20"></textarea>
-                <textarea name="outputMembers" rows="20" cols="20"></textarea>
-                <textarea name="outputBinary" rows="20" cols="40"></textarea>
-                <textarea name="outputLeaders" rows="20" cols="20"></textarea>
-                <textarea name="outputLeadersBinary" rows="20" cols="40"></textarea>
+    <div>
+        <p>sognogne</p>
+        <form>
+            <div class="stage1">
+                <h3>Klistra in närvaro data från google sheets</h3>
+                <textarea name="attendance" rows="20" cols="80"></textarea>
+                <select name="members">
+                    <option value="2">Ta automatiskt reda på alla deltagare</option>
+                    <option value="0">Första raden är alla deltagare</option>
+                    <option value="1">Sista raden är alla deltagare</option>
+                </select>
+        
+                <button type="submit" name="submitMembers">Skicka</button>
             </div>
-        </div>
-
-
-    </form>
-    <p>
-        oisejg
-    </p>
+    
+            <div class="stage2 hidden">
+                <select name="leader1" id="Leader1">
+                    <option value="0">Ingen</option>
+                </select>
+                <select name="leader2" id="Leader2">
+                    <option value="0">Ingen</option>
+                </select>
+        
+                <button type="submit" name="submitLeaders">Skicka</button>
+            </div>
+    
+            <div class="stage3 hidden">
+                <div class="stage3grid">
+                    <h2>Sammanställning</h2>
+                    <textarea name="outputMeetings" rows="4" cols="20"></textarea>
+                    <textarea name="outputMembers" rows="20" cols="20"></textarea>
+                    <textarea name="outputBinary" rows="20" cols="40"></textarea>
+                    <textarea name="outputLeaders" rows="20" cols="20"></textarea>
+                    <textarea name="outputLeadersBinary" rows="20" cols="40"></textarea>
+                </div>
+            </div>
+    
+    
+        </form>
+        <p>
+            oisejg
+        </p>
+    </div>
 </body>
 </html>
