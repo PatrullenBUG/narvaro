@@ -101,10 +101,6 @@ textarea[name="outputMembers"] {
 }
 
 @media (max-width: 1000px){
-    body {
-        background-image: none;
-        background-color: #101010;
-    }
     header div{
         margin: 0;
     }
