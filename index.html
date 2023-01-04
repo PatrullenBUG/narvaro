@@ -18,22 +18,43 @@
             <h2>Närvarosammanställaren 2000</h2>
         </div>
     </header>
-    <div>
-        <p>sognogne</p>
+    <div class="main">
+        <div class="instruction">
+            <p>
+                Denna hemsida har utväcklats av en medlem i utmanarpatrullen BUG som sökte att automatisera närvarosystemet. Denna hemsida agerar som komplement till google forms och sheets för att underlätta processen. Alla resurser för att använda systemet går att hitta här på sidan.
+            </p>
+        </div>
         <form>
             <div class="stage1">
-                <h3>Klistra in närvaro data från google sheets</h3>
-                <textarea name="attendance" rows="20" cols="80"></textarea>
-                <select name="members">
-                    <option value="2">Ta automatiskt reda på alla deltagare</option>
-                    <option value="0">Första raden är alla deltagare</option>
-                    <option value="1">Sista raden är alla deltagare</option>
-                </select>
-        
-                <button type="submit" name="submitMembers">Skicka</button>
+                <div class="instruction">
+                    <h3>Före terminen</h3>
+                    <p>
+                        Före terminens början behövs ett google formulär som närvaron fylls in i och ett kalkylark som svaren automatiskt skickas till. Länkar till mallar kommer att tillkomma.
+                    </p>
+                </div>
+                
+                <div class="instruction">
+                    <h3>Efter terminen</h3>
+                    <p>
+                        Nu är terminen slut och det dags att skicka in närvarosammanställningen. Markera alla rutor med data i från kalkylarket och klistra in i rutan. Välj sedan om första/sista raden visar alla medlemmmar eller om medlemmarna ska sorteras automatiskt (lättast). När ni är klar klickar ni "Skicka".
+                    </p>
+
+                    <textarea name="attendance" rows="20" cols="80"></textarea>
+                    <div></div>
+                    <select name="members">
+                        <option value="2">Ta automatiskt reda på alla deltagare</option>
+                        <option value="0">Första raden är alla deltagare</option>
+                        <option value="1">Sista raden är alla deltagare</option>
+                    </select>
+                    <button type="submit" name="submitMembers">Skicka</button>
+                </div>
             </div>
     
-            <div class="stage2 hidden">
+            <div class="stage2 hidden instruction">
+                <p>
+                    Välj vem eller vilka 2 som är ledare, har ni inga så väljer ni inga. Tryck "Skicka" när ni är klara.
+                </p>
+
                 <select name="leader1" id="Leader1">
                     <option value="0">Ingen</option>
                 </select>
@@ -44,22 +65,25 @@
                 <button type="submit" name="submitLeaders">Skicka</button>
             </div>
     
-            <div class="stage3 hidden">
+            <div class="stage3 hidden instruction">
+                <p>
+                    Var så goda. Översta rutan är datum (månad över och dag under), nästa är medlemmar, nästa är den binära sammanställningen och längst ner ligger ledarna. Alla dessa klistrar ni in i kalkylarket som sammanställningen ska in i.
+                </p>
+
                 <div class="stage3grid">
-                    <h2>Sammanställning</h2>
+                    <div></div>
                     <textarea name="outputMeetings" rows="4" cols="20"></textarea>
                     <textarea name="outputMembers" rows="20" cols="20"></textarea>
                     <textarea name="outputBinary" rows="20" cols="40"></textarea>
                     <textarea name="outputLeaders" rows="20" cols="20"></textarea>
                     <textarea name="outputLeadersBinary" rows="20" cols="40"></textarea>
                 </div>
+
+                <h3>Ha ett bra lov!</h3>
             </div>
     
     
         </form>
-        <p>
-            oisejg
-        </p>
     </div>
 </body>
 </html>

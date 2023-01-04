@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
 
+:root {
+    --gradAlpha: 0.4;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,9 +17,12 @@ body {
 
 header {
     display: flex;
-    background-color:rgba(100, 100, 100, 0);
-    height: 138px;
+    height: 144px;
     padding: 5px;
+    width: 100vw;
+    background: rgba(200,200,200,0.6);
+    background: linear-gradient(90deg, rgba(255,0,0,var(--gradAlpha)) 0%, rgba(255,188,42,var(--gradAlpha)) 13%, rgba(251,252,2,var(--gradAlpha)) 27%, rgba(232,255,0,var(--gradAlpha)) 35%, rgba(9,255,0,var(--gradAlpha)) 50%, rgba(2,255,204,var(--gradAlpha)) 60%, rgba(0,255,248,var(--gradAlpha)) 69%, rgba(0,14,255,var(--gradAlpha)) 82%, rgba(255,0,224,var(--gradAlpha)) 100%);
+    border-bottom: ridge 4px rgba(100,100,100,0.8);
 }
 
 header div {
@@ -44,10 +51,27 @@ h2 {
     text-shadow: #000000 2px 2px;
 }
 
+.main {
+    margin: 3em;
+}
 
+.instruction {
+    margin-top: 1em;
+    background-color:rgba(100, 200, 200, 0.8);
+    padding: 5px;
+    border:ridge 3px rgba(10, 10, 10, 0.8);
+    width:fit-content;
+    border-radius: 5px;
+    font-weight: 400;
+    max-width: 80em;
+}
 
-p {
-    color: #ff0000;
+h3 {
+    font-family: 'Tangerine', cursive;
+    font-size: 60px;
+    font-weight:500;
+    color: #000000;
+    text-shadow: #ffffff 1px 1px;
 }
 
 input {
@@ -75,6 +99,3 @@ textarea {
 textarea[name="outputMembers"] {
     text-align: end;
 }
-/* 
-background: rgb(255,0,0);
-background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,188,42,1) 13%, rgba(251,252,2,1) 27%, rgba(232,255,0,1) 35%, rgba(9,255,0,1) 50%, rgba(2,255,204,1) 60%, rgba(0,255,248,1) 69%, rgba(0,14,255,1) 82%, rgba(255,0,224,1) 100%); */
