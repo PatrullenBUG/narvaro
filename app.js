@@ -98,16 +98,6 @@ submitLeaders.addEventListener('click', function(e) {
     var tempListBinary = [];
 
     list2.forEach(element => tempListBinary.push(listMembers.map(element2 => element.attendees.includes(element2) ? 1 : 0)));
-    /* list2.forEach(element => {
-        var tempListBinary2 = [];
-        listMembers.forEach(element2 => tempListBinary2.push(element.attendees.includes(element2) ? 1 : 0));
-        tempListBinary.push(
-            listMembers.map(element2 => element.attendees.includes(element2) ? 1 : 0)
-        );
-        listMembers.forEach(element2 => tempListBinary2.push(element.attendees.includes(element2) ? 1 : 0));
-        
-        tempListBinary.push(tempListBinary2);
-    }); */
 
     var tempStringBinary = "";
     for (let i = 0; i < listMembers.length; i++) {
