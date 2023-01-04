@@ -18,7 +18,7 @@ body {
 
 header {
     display: flex;
-    height: 144px;
+    height: fit-content;
     padding: 5px;
     width: 100vw;
     background: rgba(200,200,200,0.6);
@@ -98,4 +98,29 @@ textarea {
 
 textarea[name="outputMembers"] {
     text-align: end;
+}
+
+@media (max-width: 1000px){
+    body {
+        background-image: none;
+        background-color: #101010;
+    }
+    header div{
+        margin: 0;
+    }
+    h2 {
+        font-size: 48px;
+    }
+    img[name="logo"] {
+        display: none;
+    }
+    .main {
+        margin: 0;
+    }
+    img {
+        max-width: 95%;
+    }
+    textarea {
+        max-width: 95%;
+    }
 }
