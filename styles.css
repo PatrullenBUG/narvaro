@@ -63,6 +63,7 @@ h2 {
     border:ridge 3px rgba(10, 10, 10, 0.8);
     border-radius: 5px;
     font-weight: 400;
+    width: fit-content;
     max-width: 80em;
 }
 
@@ -96,7 +97,15 @@ textarea {
     grid-template-rows: 3em auto 2em;
 }
 
+footer{
+    margin-top: 1em;
+}
+
 textarea[name="outputMembers"] {
+    text-align: end;
+}
+
+textarea[name="outputLeaders"] {
     text-align: end;
 }
 

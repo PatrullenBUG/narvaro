@@ -27,36 +27,50 @@ class meeting {
     }
 }
 
+// What to do when the first button is clicked
 submitMembers.addEventListener('click', function(e) {
+    // Prevent the form from submitting
     e.preventDefault();
+
+    // Hide the first stage and show the second stage
     document.querySelector(".stage1").classList.add("hidden");
     document.querySelector(".stage2").classList.remove("hidden");
 
+    // Get the attendance list and split it into an array
     attendance = attendanceElement.value;
     list1 = attendance.split("\n");
-    console.log(list1);
+
+    // Create a new meeting object for each meeting
     list1.forEach(element => {
+        // Split the meeting into an array
         var listTemp = element.split("	");
-        console.log(listTemp);
+        // Format the meeting and add it to the list
         list2.push
-        (new meeting(
+        (
+            new meeting(
             listTemp[0].split(" ")[0],
             listTemp[1],
             listTemp[2].split(", "),
+            // If the meeting has an alternative date, add it, otherwise add 0
             listTemp.length > 3 ? listTemp[3] : 0
         ));
     });
+
+    // Create a list of all the members based on the option selected
     switch(members.value)
     {
         case "0":
+            // Add the first meeting's attendees to the list
             listMembers = list2[0].attendees;
             list2.splice(0, 1);
             break;
         case "1":
+            // Add the last meeting's attendees to the list
             listMembers = list2[list2.length-1].attendees;
             list2.splice(list2.length-1, 1);
             break;
         default:
+            // Add all the attendees to the list without duplicates
             list2.forEach(element => {
                 element.attendees.forEach(element2 => {
                     if(!listMembers.includes(element2))
@@ -68,6 +82,7 @@ submitMembers.addEventListener('click', function(e) {
             break;
     }
 
+    // Add options to pick leaders
     listMembers.forEach(element => {
         var option = document.createElement("option");
         option.text = element;
@@ -82,23 +97,33 @@ submitMembers.addEventListener('click', function(e) {
     });
 });
 
+
+// What to do when the second button is clicked
 submitLeaders.addEventListener('click', function(e) {
+    // Prevent the form from submitting
     e.preventDefault();
+    // Hide the second stage and show the third stage
     document.querySelector(".stage2").classList.add("hidden");
     document.querySelector(".stage3").classList.remove("hidden");
     
+    // Remove the leaders from the list of members
     if(selectLeader1.value != 0) listLeaders.push(selectLeader1.value);
     if(selectLeader2.value != 0) listLeaders.push(selectLeader2.value);
     listLeaders.forEach(element => listMembers.splice(listMembers.indexOf(element), 1));
     
+    // Sort the memberlists
     listMembers.sort();
     listLeaders.sort();
+
+    // Output the memberlists
     outputMembers.value = listMembers.join("\n");
     outputLeaders.value = listLeaders.join("\n");
-    var tempListBinary = [];
 
+    // Make a binary matrix of the meetings and their attendees
+    var tempListBinary = [];
     list2.forEach(element => tempListBinary.push(listMembers.map(element2 => element.attendees.includes(element2) ? 1 : 0)));
 
+    // Format and output the binary matrix
     var tempStringBinary = "";
     for (let i = 0; i < listMembers.length; i++) {
         for (let j = 0; j < list2.length; j++) {
@@ -108,8 +133,11 @@ submitLeaders.addEventListener('click', function(e) {
     }
     outputBinary.value = tempStringBinary;
     
+    // Make a binary matrix of the meetings and their leaders
     tempListBinary = [];
     list2.forEach(element => tempListBinary.push(listLeaders.map(element2 => element.attendees.includes(element2) ? 1 : 0)));
+
+    // Format and output the binary matrix
     tempStringBinary = "";
     for (let i = 0; i < listLeaders.length; i++) {
         for (let j = 0; j < list2.length; j++) {
@@ -119,6 +147,7 @@ submitLeaders.addEventListener('click', function(e) {
     }
     outputLeadersBinary.value = tempStringBinary;
 
+    // Format and output the meeting dates
     var tempStringMeetings = "";
     list2.forEach(element => tempStringMeetings += (element.altDate == 0 ? element.date.split("/")[1]: element.altDate.split("/")[1]) + "	");
     tempStringMeetings += "\n";
