@@ -18,12 +18,11 @@ var selectLeader1 = document.getElementById("Leader1"),
     listLeaders = [];
 
 class meeting {
-    constructor(date, email, attendees, altDate)
+    constructor(date, email, attendees)
     {
         this.date = date;
         this.email = email;
         this.attendees = attendees;
-        this.altDate = altDate;
     }
 }
 
@@ -48,14 +47,16 @@ submitMembers.addEventListener('click', function(e) {
         list2.push
         (
             new meeting(
-            listTemp[0].split(" ")[0],
+                // If the meeting has an alternative date, add it, otherwise add the regular date
+            listTemp[3] == 0? listTemp[0].split(" ")[0] : listTemp[3],
             listTemp[1],
-            listTemp[2].split(", "),
-            // If the meeting has an alternative date, add it, otherwise add 0
-            listTemp.length > 3 ? listTemp[3] : 0
+            listTemp[2].split(", ")
         ));
     });
 
+    // Sort the meetings by date
+    list2 = list2.sort((a, b) => a.date.split("/")[2] - b.date.split("/")[2] || a.date.split("/")[1] - b.date.split("/")[1] || a.date.split("/")[0] - b.date.split("/")[0]);
+    
     // Create a list of all the members based on the option selected
     switch(members.value)
     {
@@ -149,9 +150,9 @@ submitLeaders.addEventListener('click', function(e) {
 
     // Format and output the meeting dates
     var tempStringMeetings = "";
-    list2.forEach(element => tempStringMeetings += (element.altDate == 0 ? element.date.split("/")[1]: element.altDate.split("/")[1]) + "	");
+    list2.forEach(element => tempStringMeetings += element.date.split("/")[1] + "	");
     tempStringMeetings += "\n";
-    list2.forEach(element => tempStringMeetings += (element.altDate == 0 ? element.date.split("/")[0]: element.altDate.split("/")[0]) + "	");
+    list2.forEach(element => tempStringMeetings += element.date.split("/")[0] + "	");
 
     outputMeetings.value = tempStringMeetings;
 });
