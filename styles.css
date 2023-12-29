@@ -10,7 +10,7 @@
 }
 
 body {
-    background-image: url("background.webp");
+    background-image: url("background2.webp");
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
@@ -21,9 +21,11 @@ header {
     height: fit-content;
     padding: 5px;
     width: 100vw;
-    background: rgba(200,200,200,0.6);
-    background: linear-gradient(90deg, rgba(255,0,0,var(--gradAlpha)) 0%, rgba(255,188,42,var(--gradAlpha)) 13%, rgba(251,252,2,var(--gradAlpha)) 27%, rgba(232,255,0,var(--gradAlpha)) 35%, rgba(9,255,0,var(--gradAlpha)) 50%, rgba(2,255,204,var(--gradAlpha)) 60%, rgba(0,255,248,var(--gradAlpha)) 69%, rgba(0,14,255,var(--gradAlpha)) 82%, rgba(255,0,224,var(--gradAlpha)) 100%);
-    border-bottom: ridge 4px rgba(100,100,100,0.8);
+    /* background: rgba(200,200,200,0.6);
+    background: linear-gradient(90deg, rgba(255,0,0,var(--gradAlpha)) 0%, rgba(255,188,42,var(--gradAlpha)) 13%, rgba(251,252,2,var(--gradAlpha)) 27%, rgba(232,255,0,var(--gradAlpha)) 35%, rgba(9,255,0,var(--gradAlpha)) 50%, rgba(2,255,204,var(--gradAlpha)) 60%, rgba(0,255,248,var(--gradAlpha)) 69%, rgba(0,14,255,var(--gradAlpha)) 82%, rgba(255,0,224,var(--gradAlpha)) 100%); */
+    background: rgb(208,208,208);
+    background: linear-gradient(90deg, rgba(208,208,208,1) 0%, rgba(63,57,166,1) 100%);
+    box-shadow: 0px 1px 5px black;
 }
 
 header div {
@@ -58,13 +60,21 @@ h2 {
 
 .instruction {
     margin-top: 1em;
-    background-color:rgba(100, 200, 200, 0.8);
-    padding: 5px;
-    border:ridge 3px rgba(10, 10, 10, 0.8);
-    border-radius: 5px;
+    background-color:rgba(200, 230, 230, 0.9);
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 8px black;
+    border-radius: 20px;
+    font-size: 18px;
     font-weight: 400;
     width: fit-content;
     max-width: 80em;
+}
+
+.instruction img {
+    margin-top: 1em;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px black;
 }
 
 h3 {
@@ -79,12 +89,10 @@ input {
     background-color: #ffffff;
     width: 80%;
     height: 10em;
-    
 }
 
 textarea {
     background-color: #ffffff;
-
 }
 
 .hidden {
